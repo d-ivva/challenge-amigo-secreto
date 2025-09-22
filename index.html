@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Amigo Secreto | Sorteio</title>
+</head>
+
+<body>
+    <main class="main-content">
+        <header class="header-banner">
+            <h1 class="main-title">Amigo Secreto</h1>
+            <img class="main-image" src="./assets/presente.png" alt="Imagem representativa de amigo secreto">
+        </header>
+        
+        <section id="secao-adicionar" class="input-section">
+            <h2 class="section-title">Digite o nome dos seus amigos</h2>
+            <div class="input-wrapper">
+                <input type="text" id="amigo" class="input-name" placeholder="Digite um nome">
+                <button class="button-add" onclick="adicionarAmigo()">Adicionar</button>
+            </div>
+            
+            <ul id="listaAmigos" class="name-list"></ul>
+
+            <div class="button-container">
+                <button id="botao-sortear" class="button-draw" onclick="sortearAmigo()">Sortear!</button>
+                <button id="botao-reiniciar" class="button-reset hidden" onclick="reiniciarJogo()">Começar de novo</button>
+            </div>
+        </section>
+
+        <section id="secao-revelar" class="input-section hidden">
+            <h2 class="section-title">Sorteio realizado! Quem está jogando?</h2>
+            <div class="input-wrapper">
+                <select id="selecao-nomes" class="input-name"></select>
+                <button id="botao-revelar" class="button-add">Revelar!</button>
+            </div>
+            <div id="resultado" class="result-list" aria-live="polite"></div>
+        </section>
+
+    </main>
+
+    <script src="app.js" defer></script>
+</body>
+</html>
